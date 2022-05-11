@@ -123,6 +123,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "xovirev"
+    }
+  },
+  "defaultProject": "xovirev",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "less"
+    }
+  }
 }

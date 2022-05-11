@@ -1,0 +1,27 @@
+<div class="search">
+  <div class="search-col">
+    <div class="input-group">
+      <input id="searchList" placeholder="Search" type="text"
+      class="form-control"
+      [(ngModel)]="query"
+      (keyup)="queryHandler()"
+      >
+      <div class="dropdown">
+        <button (click)="buttonClick()" class="dropbtn">
+            Sort By: <span>&#9660;</span>
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a (click)="onSortClick({orderBy:'tarifName', orderType: orderType})">Tarif Name</a>
+          <a (click)="onSortClick({orderBy:'upload', orderType: orderType})">Upload</a>
+          <a (click)="onSortClick({orderBy:'download', orderType: orderType})">Download</a>
+          <a (click)="onSortClick({orderBy:'price', orderType: orderType})">Price</a>
+          <a (click)="onSortClick({orderBy:'benefit.type1', orderType: orderType})">Benefit</a>
+          <a (click)="onSortClick({orderBy:orderBy, orderType:'asc'})">Ascending</a>
+          <a (click)="onSortClick({orderBy:orderBy, orderType:'desc'})">Descending</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
